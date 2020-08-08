@@ -132,3 +132,13 @@ Add the selectedRow property, this will emit the selected row from TableGrid to 
 Delete button should delete the record from parent.
 
 Add a boolean property of name 'isSortable' and 'sortProperty', if 'isSortable' is true, then sort the table data based on the value of the 'sortProperty'
+
+======================================================================================
+React Hooks form 16.8 +
+1. A way of creating functional components
+   1. function MyComponent() {return HTML}
+   2. const MyComponent=(props)=>{}; the constant function expression
+2. State in the hooks is defined as ES 6 mechanism knows as 'destructurer' as below
+   1. const [<state-variable>, <callback-to-update-state-variable>] = useState(<INIT-VALUE-OF-State-variable>)
+      1. useState() an object from React Object Model 
+   2. The local variables will be defined as 'const'
