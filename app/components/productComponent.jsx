@@ -68,6 +68,10 @@ class ProductComponent extends Component {
       }); // copy with aready available values
      
     }
+
+    componentDidMount(){
+      // AJAX Calls from this
+    }
     render() {
         return (
             <div className="container">
