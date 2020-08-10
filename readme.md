@@ -142,3 +142,14 @@ React Hooks form 16.8 +
    1. const [<state-variable>, <callback-to-update-state-variable>] = useState(<INIT-VALUE-OF-State-variable>)
       1. useState() an object from React Object Model 
    2. The local variables will be defined as 'const'
+3.  useEffect()
+    1.  Manage all async or time-bound operations
+    2.  What is async(?) in JavaSCript
+        1.  ES 6 has 'Promise' 
+
+======================================================================================
+Ex 2: Modify the Product Class Component to be used as Hook component with a Search Functionality in it.
+
+
+Search Functionality is implemented using TextBox, that will accept the search text and it will filter the data in the ProductList table based on the search criteria e.g. if TextBox is having the CategoryName, then the table will show only the list of products of that category.
+
