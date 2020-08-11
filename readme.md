@@ -94,6 +94,7 @@ React App Development
 =====================================================================================
 
 React Component
+
 - WebComponent
   - HTML aka UI, Property System and behavior
   - Property System
@@ -118,14 +119,14 @@ React Component
 =======================================================================================
 Ex 1:
 Create a TableGrid Component as follows
-             <TableGrid DataSource={this.state.Products} selectedRow={this.state.getRowValue} isSortable="true" sortProperty="ProductName"
+<TableGrid DataSource={this.state.Products} selectedRow={this.state.getRowValue} isSortable="true" sortProperty="ProductName"
               showDeleteButton="true"></TableGrid>
 
 It should Accept DataSorce based on which it should generate TableHeaders and TableRows. Each row must have a delete button to delete row. Add a boolean property for the TableGrid e.g. showDeleteButton, is this property is set to true then only the delete button should be generated in each row.
 
 To Generate columns headers, read the first record from DataSource
- var headers = Object.keys(this.props.DataSource[0]);
- headers array will have all properties of the first record from Data Source 
+var headers = Object.keys(this.props.DataSource[0]);
+headers array will have all properties of the first record from Data Source
 
 Add the selectedRow property, this will emit the selected row from TableGrid to its parent, so that it can be displayed.
 
@@ -135,21 +136,34 @@ Add a boolean property of name 'isSortable' and 'sortProperty', if 'isSortable' 
 
 ======================================================================================
 React Hooks form 16.8 +
+
 1. A way of creating functional components
    1. function MyComponent() {return HTML}
    2. const MyComponent=(props)=>{}; the constant function expression
 2. State in the hooks is defined as ES 6 mechanism knows as 'destructurer' as below
    1. const [<state-variable>, <callback-to-update-state-variable>] = useState(<INIT-VALUE-OF-State-variable>)
-      1. useState() an object from React Object Model 
+      1. useState() an object from React Object Model
    2. The local variables will be defined as 'const'
-3.  useEffect()
-    1.  Manage all async or time-bound operations
-    2.  What is async(?) in JavaSCript
-        1.  ES 6 has 'Promise' 
+3. useEffect()
+   1. Manage all async or time-bound operations
+   2. What is async(?) in JavaSCript
+      1. ES 6 has 'Promise'
 
 ======================================================================================
 Ex 2: Modify the Product Class Component to be used as Hook component with a Search Functionality in it.
 
-
 Search Functionality is implemented using TextBox, that will accept the search text and it will filter the data in the ProductList table based on the search criteria e.g. if TextBox is having the CategoryName, then the table will show only the list of products of that category.
 
+======================================================================================
+React for LOB Apps
+
+1. Ajax Calls
+2. Reusable Components
+3. Plan for UI Validations
+
+   1. Write validations based on the current state of the component
+
+Ex 3: UX Exercise
+1a. (Mandatory) Create a Validation Summary Component, that will display all validations occured on the currently loaded component. The valiation summary components should be ganeric so that it can display all types of Validations errors send by the current loaded component. If the currenly loaded component, has valid values, then the error message must be immedialtly removed from the validation summary component.
+
+1b. (optonal) When the component uses validation summary then when the component to validated is loaded, the default validation user message e.g. PersonId is must, PersonName is must, should be immdiately shown by the validation summary component.
