@@ -31,7 +31,7 @@ const UseEffectAjaxComponent =() => {
        serv.getData().then((response) => {
            load(response.data); 
        });
-   },[products]); // dep. object for toggeling from initial to final value
+   },[]); // dep. object for toggeling from initial to final value
    // so that the useEffect() will mount and unmout for rendering 
    // based on the value for the object 
    return (
